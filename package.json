@@ -1,0 +1,16 @@
+{
+  "name": "super-lightning",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small, deployable cache gateway for making existing JSON and static APIs faster.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test",
+    "check": "node --check src/config.js && node --check src/cache.js && node --check src/server.js && node --check src/cli.js && node --check test/server.test.js"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+{
+  "port": 8787,
+  "defaultTtlSeconds": 30,
+  "staleWhileRevalidateSeconds": 60,
+  "maxEntries": 1000,
+  "routes": [
+    {
+      "prefix": "/api",
+      "upstream": "https://api.example.com",
+      "cacheTtlSeconds": 60
+    }
+  ]
+}

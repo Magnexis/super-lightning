@@ -1,0 +1,4 @@
+node_modules/
+super-lightning.config.json
+.env
+coverage/
