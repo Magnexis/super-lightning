@@ -13,7 +13,12 @@ export default async (request) => {
     const sessionId = new URL(request.url).searchParams.get("session_id");
     if (!sessionId || !/^cs_[A-Za-z0-9_]+$/.test(sessionId)) return response(400, { error: "invalid_session_id" });
     const key = process.env.STRIPE_SECRET_KEY;
-    const privateKey = process.env.SUPER_LIGHTNING_LICENSE_PRIVATE_KEY;
+    // Netlify environment values can normalize multiline PEM values. Prefer the
+    // base64 form in production, while retaining the PEM variable for self-hosting.
+    const privateKey = process.env.SUPER_LIGHTNING_LICENSE_PRIVATE_KEY
+      || (process.env.SUPER_LIGHTNING_LICENSE_KEY_B64
+        ? Buffer.from(process.env.SUPER_LIGHTNING_LICENSE_KEY_B64, "base64").toString("utf8")
+        : undefined);
     if (!key || !privateKey) return response(503, { error: "licensing_not_configured" });
     const stripe = await fetch(`https://api.stripe.com/v1/checkout/sessions/${encodeURIComponent(sessionId)}`, {
       headers: { authorization: `Bearer ${key}`, "stripe-version": "2026-08-26.dahlia" }
