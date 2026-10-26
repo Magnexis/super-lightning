@@ -3,12 +3,11 @@ const PRICE_BY_TIER = {
   business: "STRIPE_BUSINESS_PRICE_ID"
 };
 
-function response(statusCode, body) {
-  return {
-    statusCode,
-    headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" },
-    body: JSON.stringify(body)
-  };
+function response(status, body) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" }
+  });
 }
 
 export default async (request) => {
