@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Super Lightning is the self-hosted acceleration plane for the infrastructure you already own." />
+    <meta name="theme-color" content="#050914" />
+    <title>Super Lightning — Magnexis</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+    <header class="topbar"><a class="brand" href="#top"><img src="/assets/super-lightning-mark-3d.png" alt="" /><span>SUPER LIGHTNING</span></a><nav aria-label="Main navigation"><a href="#how">How it works</a><a href="#profiles">Profiles</a><a href="#pricing">License</a><a href="https://github.com/theworker02/super-lightning" data-github>GitHub</a></nav></header>
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow"><i></i> Magnexis infrastructure</div>
+        <h1>Make the systems you own<br /><em>move like lightning.</em></h1>
+        <p class="lede">A self-hosted acceleration plane for APIs, AI data paths, agent tools, and developer infrastructure. Put it beside an existing service—no rewrite, no vendor toll road.</p>
+        <div class="actions"><a class="button primary" href="https://github.com/theworker02/super-lightning" data-github>View the source <span>↗</span></a><a class="button ghost" href="#how">See the system</a></div>
+        <p class="microcopy">Free evaluation for 30 days · Runs locally or in your own infrastructure</p>
+        <div class="acceleration" aria-label="Live acceleration illustration"><div class="grid"></div><div class="beam"></div><div class="orb one"></div><div class="orb two"></div><div class="terminal"><div class="terminal-head"><span></span><span></span><span></span><b>LIGHTNING / LIVE</b></div><div class="metric"><small>UPSTREAM P95</small><strong>418<span>ms</span></strong></div><div class="arrow">↓</div><div class="metric charged"><small>EDGE P95</small><strong>43<span>ms</span></strong></div><div class="delta">9.7× FASTER</div></div></div>
+      </section>
+      <section id="how" class="chapter"><div><p class="kicker">The acceleration plane</p><h2>One deliberate layer.<br />A lot less waiting.</h2></div><div class="chapter-copy"><p>Super Lightning only proxies public <code>GET</code> and <code>HEAD</code> routes you explicitly configure. It caches safely, compresses intelligently, collapses cache stampedes, and keeps serving known-good responses when an origin has a bad minute.</p><p>Your requests remain in your network. The data plane does not call Magnexis, Stripe, or an analytics service.</p></div></section>
+      <section class="capabilities"><article><b>01</b><h3>Cache once.<br />Serve many.</h3><p>Coalesces concurrent identical requests, honors ETags, and delivers Brotli or gzip from local memory.</p></article><article><b>02</b><h3>Keep momentum<br />through failures.</h3><p>Stale-on-error, stale-while-revalidate, compatible-origin fallback, and circuit breakers protect your origin.</p></article><article><b>03</b><h3>Tune with<br />evidence.</h3><p>A local Lightning Console, Prometheus metrics, route warmup, and acceleration analysis make the gains observable.</p></article></section>
+      <section id="profiles" class="profiles"><div><p class="kicker">Built for real workloads</p><h2>Choose the path<br />you need to accelerate.</h2></div><div class="profile-list"><details open><summary><span>AI training delivery</span><b>01</b></summary><p>Accelerate datasets, tokenizers, checkpoints, and artifacts delivered over HTTP. It does not pretend to make compute or GPUs faster.</p></details><details><summary><span>AI agent work</span><b>02</b></summary><p>Make repeated safe reads—documentation, catalogs, registry metadata, and public APIs—faster and friendlier to upstreams.</p></details><details><summary><span>Developer infrastructure</span><b>03</b></summary><p>Put a fast, resilient layer in front of package metadata, artifacts, internal tools, and public service endpoints.</p></details></div></section>
+      <section class="trust"><p>Designed to be boring where it matters.</p><div><span>Explicit upstream allow-list</span><span>Credentials bypass cache</span><span>No SaaS control plane</span><span>Self-hosted by default</span></div></section>
+      <section id="pricing" class="pricing"><p class="kicker">Official Magnexis license</p><h2>Start free. Keep the<br />official distribution moving.</h2><p class="pricing-intro">The source is public under MIT. The official distribution starts with a 30-day evaluation; continued official use needs a signed Magnexis license.</p><div class="price-grid"><article><p>Evaluation</p><h3>Free</h3><span>30 days · Any project</span><a class="button ghost" href="https://github.com/theworker02/super-lightning" data-github>Get started</a></article><article class="featured"><p>Individual</p><h3>$350</h3><span>One-time · One person</span><button class="button primary checkout" data-tier="individual">Buy individual <span>↗</span></button></article><article><p>Business</p><h3>$1,500</h3><span>One-time · Company or team</span><button class="button ghost checkout" data-tier="business">Buy business <span>↗</span></button></article></div><p id="purchase-status" class="purchase-status" role="status"></p></section>
+      <section class="closing"><p class="kicker">Make infrastructure feel immediate</p><h2>Bring the thunder<br />to the things that matter.</h2><a class="button primary" href="https://github.com/theworker02/super-lightning" data-github>Deploy Super Lightning <span>↗</span></a></section>
+    </main>
+    <footer><span>© 2026 Magnexis</span><span>Super Lightning is source-available under MIT; official signed licenses are issued by Magnexis.</span></footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

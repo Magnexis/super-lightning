@@ -1,0 +1,15 @@
+services:
+  super-lightning-licensing:
+    build:
+      context: .
+      dockerfile: services/licensing/Dockerfile
+    env_file:
+      - services/licensing/.env
+    ports:
+      - "4242:4242"
+    volumes:
+      - licensing-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  licensing-data:

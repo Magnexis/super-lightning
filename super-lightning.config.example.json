@@ -1,12 +1,27 @@
 {
+  "workloadProfile": "general",
   "port": 8787,
   "defaultTtlSeconds": 30,
   "staleWhileRevalidateSeconds": 60,
+  "staleIfErrorSeconds": 300,
   "maxEntries": 1000,
+  "maxTtlSeconds": 3600,
+  "requestTimeoutMs": 15000,
+  "maxCacheableBodyBytes": 5242880,
+  "circuitBreaker": {
+    "failureThreshold": 5,
+    "resetSeconds": 15
+  },
+  "rateLimit": {
+    "maxRequests": 120,
+    "windowSeconds": 60
+  },
   "routes": [
     {
       "prefix": "/api",
       "upstream": "https://api.example.com",
+      "fallbackUpstreams": ["https://api-backup.example.com"],
+      "ignoreQueryParameters": ["utm_source", "utm_medium"],
       "cacheTtlSeconds": 60
     }
   ]
